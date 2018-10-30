@@ -1,8 +1,6 @@
 package com.yukinagato.api
 
-import com.sun.javafx.fxml.builder.URLBuilder
 import org.springframework.http.HttpHeaders
-import org.springframework.web.bind.MissingServletRequestParameterException
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestHeader
 import org.springframework.web.bind.annotation.RequestParam
@@ -47,3 +45,5 @@ class PageviewController {
         }
     }
 }
+
+data class Pageview(val basis: String, val url: String, val count: Long)
